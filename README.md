@@ -3,7 +3,7 @@ This is only show that how the 'softmax_cross_entropy_with_logits()' function in
 The "Numerically-Stable-Cross-Entropy-SingleLabel.py" file represent the cost function for single label problems and "Numerically-Stable-Cross-Entropy-MultiLabel.py" represents the cost function for multi-label (specificly two label) problems.
 
 ### Numerically Stable Cross Entropy Loss Function:
-Since the large numbers in `exp()` function of python returns 'inf' (more than 709 in python 2.7.11), so in these version of cross entropy loss without 'softmax_cross_entropy_with_logits()' function, I used a condition of checking the highest value in logits, which is determined by `threshold` variable in code. For larger scores in logit it use to approximate the loss, but for smaller scores it use ordinary way to calculate loss.
+Since the large numbers in `exp()` function of python returns 'inf' (more than exp 709.782712893384 in python 2.7.11), so in these version of cross entropy loss without 'softmax_cross_entropy_with_logits()' function, I used a condition of checking the highest value in logits, which is determined by `threshold` variable in code. For larger scores in logit it use to approximate the loss, but for smaller scores it use ordinary way to calculate loss.
 
 ### Notes on 'softmax_cross_entropy_with_logits()' Function in Tensorflow:
 
